@@ -36,6 +36,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
+    redirect_to category_articles_path(@category)
   end
 
   def index
