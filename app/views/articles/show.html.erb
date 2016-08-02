@@ -1,0 +1,18 @@
+<h1>Category: <%= @article.category.name.capitalize %></h1>
+
+<p>
+ <h2><strong>Article:</strong>
+ <%= @article.title.capitalize %>
+ </h2>
+</p>
+
+<p><%= @article.description %></p>
+
+<p>Price: <%= @article.price %></p>
+
+<br>
+<%= link_to 'Back', category_articles_path %><br>
+
+<!-- /posts/:post_id/comments/:id/edit -->
+<%= link_to 'Edit', edit_category_article_path(@article.category, @article) %>
+
