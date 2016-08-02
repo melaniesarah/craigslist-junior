@@ -1,0 +1,26 @@
+<h1>New Article</h1>
+<%= form_for :article, url: new_category_article_path do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </p>
+  <p>
+    <%= f.label :user_email %><br>
+    <%= f.text_field :user_email %>
+  </p>
+  <p>
+    <%= f.label :edit_url %><br>
+    <%= f.text_field :edit_url %>
+  </p>
+  <p>
+    <%= f.submit 'Save Article' %>
+  </p>
+<% end %>

@@ -1,0 +1,15 @@
+<p>
+ <h1><strong>Category Name:</strong>
+ <%= @category.name.capitalize %>
+ </h1>
+</p>
+
+<h2>Articles</h2>
+  <ul>
+    <% @category.articles.each do |article| %>
+      <li><%= link_to article.title, category_article_path(@category, article)%></li>
+  <% end %>
+</ul>
+
+<%= link_to 'New Article', new_category_article_path(@category) %><br>
+<%= link_to 'Back', categories_path %>

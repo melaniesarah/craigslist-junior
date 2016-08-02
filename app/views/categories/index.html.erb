@@ -1,0 +1,17 @@
+<h1>Hello, Rails!</h1>
+<%= link_to 'My Rails Craiglist', controller: 'categories' %>
+
+<h1>Listing Categories</h1>
+
+<table>
+ <tr>
+   <th>Name</th>
+ </tr>
+
+ <% @categories.each do |category| %>
+   <tr>
+     <td><%= category.name %></td>
+     <td><%= link_to 'Show', category_path(category) %></td>
+   </tr>
+ <% end %>
+</table>

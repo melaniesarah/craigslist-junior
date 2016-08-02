@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :category do
+  resources :categories do
     resources :articles
   end
 
